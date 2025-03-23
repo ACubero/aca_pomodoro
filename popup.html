@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pomodoro Timer</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2 class="app-title">Pomodoro Timer</h2>
+    
+    <div class="session-selector">
+      <label class="radio-container">
+        <input type="radio" name="type" value="pomodoro" checked>
+        <span class="radio-label">Pomodoro (25m)</span>
+      </label>
+      <label class="radio-container">
+        <input type="radio" name="type" value="shortBreak">
+        <span class="radio-label">Descanso Corto (5m)</span>
+      </label>
+      <label class="radio-container">
+        <input type="radio" name="type" value="longBreak">
+        <span class="radio-label">Descanso Largo (15m)</span>
+      </label>
+    </div>
+    
+    <div id="timer" class="timer">25:00:00</div>
+    
+    <div class="button-group">
+      <button id="startBtn" class="btn btn-start">Iniciar</button>
+      <button id="pauseBtn" class="btn btn-pause" disabled>Pausar</button>
+      <button id="resetBtn" class="btn btn-reset">Reiniciar</button>
+    </div>
+    
+    <div class="sessions-container">
+      <h3 class="section-title">Historial de Sesiones</h3>
+      <div id="sessions" class="sessions-list"></div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
